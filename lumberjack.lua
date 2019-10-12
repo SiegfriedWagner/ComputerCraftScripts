@@ -248,10 +248,10 @@ end
 -- main loop
 while true do
     while refuel() and not isInventoryFull()  do
-        if isBlock("minecraft:glass") then
+        if isBlock("chisel:glass") then
             if zPos % 2 == 0 then
                 turnRight()
-                if not isBlock("minecraft:glass") then
+                if not isBlock("chisel:glass") then
                     cultivate()
                     turnRight()
                 else
@@ -259,7 +259,7 @@ while true do
                 end
             else
                 turnLeft()
-                if not isBlock("minecraft:glass") then
+                if not isBlock("chisel:glass") then
                     cultivate()
                     turnLeft()
                 else
