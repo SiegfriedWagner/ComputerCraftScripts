@@ -269,6 +269,12 @@ while true do
         else
             cultivate()
         end
+--debug for saplings		
+	local data = turtle.getItemDetail(16)
+	if data then
+  		print("Item name: ", data.name)
+	end
+--debug for saplings		
     end
     returnSupplies()
     sleep(60)
