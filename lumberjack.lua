@@ -19,7 +19,7 @@ end
 
 
 -- global variables
-TvalidSapling = Set:new({"minecraft:sapling", "ic2:sapling", "rustic:sapling", "natura:overworld:sapling", "natura:overworld:sapling2", "forestry:sapling_ge"})
+TvalidSapling = Set:new({"minecraft:sapling", "ic2:sapling", "rustic:sapling", "natura:overworld_sapling", "natura:overworld_sapling2", "forestry:sapling_ge"})
 TvalidFuel = Set:new({"minecraft:coal", "railcraft:fuel_coke"})
 TvalidWood = Set:new({"minecraft:log", "ic2:rubber_wood", "rustic:log", "natura:overworld_logs", "natura:overworld_logs2", "forestry:log.0"})
 xPos, zPos = 0,0
