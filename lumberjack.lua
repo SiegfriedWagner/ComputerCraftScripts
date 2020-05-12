@@ -19,9 +19,9 @@ end
 
 
 -- global variables
-TvalidSapling = Set:new({"minecraft:sapling", "ic2:sapling"})
+TvalidSapling = Set:new({"minecraft:sapling", "ic2:sapling", "rustic:sapling", "natura:overworld_sapling", "natura:overworld_sapling2", "forestry:sapling", "forestry:sapling_ge"})
 TvalidFuel = Set:new({"minecraft:coal", "railcraft:fuel_coke"})
-TvalidWood = Set:new({"minecraft:log", "ic2:rubber_wood"})
+TvalidWood = Set:new({"minecraft:log", "ic2:rubber_wood", "rustic:log", "natura:overworld_logs", "natura:overworld_logs2", "forestry:log.0"})
 xPos, zPos = 0,0
 xDir, zDir = 1,0
 -- functions
@@ -248,10 +248,10 @@ end
 -- main loop
 while true do
     while refuel() and not isInventoryFull()  do
-        if isBlock("minecraft:glass") then
+        if isBlock("chisel:glass") then
             if zPos % 2 == 0 then
                 turnRight()
-                if not isBlock("minecraft:glass") then
+                if not isBlock("chisel:glass") then
                     cultivate()
                     turnRight()
                 else
@@ -259,7 +259,7 @@ while true do
                 end
             else
                 turnLeft()
-                if not isBlock("minecraft:glass") then
+                if not isBlock("chisel:glass") then
                     cultivate()
                     turnLeft()
                 else
@@ -269,6 +269,12 @@ while true do
         else
             cultivate()
         end
+--debug for saplings		
+--	local data = turtle.getItemDetail(16)
+--	if data then
+-- 		print("Item name: ", data.name)
+--	end
+--debug for saplings		
     end
     returnSupplies()
     sleep(60)
